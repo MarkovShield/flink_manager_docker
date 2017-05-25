@@ -20,6 +20,9 @@ FROM pschmid/flink-base:1.2.0
 
 MAINTAINER Philip Schmid
 
+USER root
 ADD docker-entrypoint.sh $FLINK_HOME/bin/
+RUN chmod +x $FLINK_HOME/bin/docker-entrypoint.sh
+USER flink
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["/bin/bash"]
