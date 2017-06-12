@@ -16,7 +16,7 @@
 # limitations under the License.
 ################################################################################
 
-FROM pschmid/flink-base:1.2.0
+FROM markovshield/flink-base:1.2.0
 
 MAINTAINER Philip Schmid
 
